@@ -1,18 +1,25 @@
-var user_loginid = "1307515" //Geraldine loginid
-var user_group = db.acl_users.findOne({loginid:user_loginid,groups:/.*5a6ec6d877b8a9f91600003a.*/}).groups[0]
-var is_grantedsd = false;
-db.acl_groups.find({_id:user_group}).forEach(function(x){
-  x.grants.forEach(function(g){
-    if(g.accessid.toLowerCase().indexOf("stake")>=0){
-        is_grantedsd = true;
-    }
-  })  
-})
-var landing_page = ""
-db.acl_accessibility.find({roleid:user_group}).forEach(function(x){
-    if(x.islandingpage){
-        landing_page = x.title
-    }
-})
-print("Granted Access to Stakeholder Dashboard : "+(is_grantedsd ? "YES" : "NO"))
-print("Landing Page : "+landing_page)
+var apps = db.getCollection('ss_application').find({}).toArray();
+apps.forEach(function(app){
+    appID = app._id.str;
+    var collName = "tb_"+appID+"_Initiative";
+    var initiatives = db.getCollection(collName ).find({}).toArray();
+    initiatives.forEach(function(init){
+        segmentType = typeof init.Segment;
+        if(segmentType == "undefined"){
+            init.Segment = [];
+        }else if(segmentType == "string"){
+            if( init.Segment != ""){
+                init.Segment = [init.Segment];            
+            }else{
+                init.Segment = [];            
+            }
+        }else if(init.Segment.length >0 && init.Segment[0] == ""){
+            init.Segment=[];
+        }
+        
+        if(typeof init.Segment == "object"){
+            db.getCollection(collName ).save(init);
+        }
+        
+    });    
+});
