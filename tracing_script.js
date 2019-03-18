@@ -1,25 +1,36 @@
-var apps = db.getCollection('ss_application').find({}).toArray();
-apps.forEach(function(app){
-    appID = app._id.str;
-    var collName = "tb_"+appID+"_Initiative";
-    var initiatives = db.getCollection(collName ).find({}).toArray();
-    initiatives.forEach(function(init){
-        segmentType = typeof init.Segment;
-        if(segmentType == "undefined"){
-            init.Segment = [];
-        }else if(segmentType == "string"){
-            if( init.Segment != ""){
-                init.Segment = [init.Segment];            
-            }else{
-                init.Segment = [];            
-            }
-        }else if(init.Segment.length >0 && init.Segment[0] == ""){
-            init.Segment=[];
-        }
-        
-        if(typeof init.Segment == "object"){
-            db.getCollection(collName ).save(init);
-        }
-        
-    });    
-});
+
+db.getSiblingDB(acldatabase).applications.save({
+    "_id" : "web-ss#5c880a131fa32be5015ac11f",
+    "Name" : "Risk",
+    "LandingURL" : "/dashboard/default"
+})
+
+db.getSiblingDB(acldatabase).applications.save({
+    "_id" : "web-ss#5c880a141fa32be5015ac120",
+    "Name" : "T&I",
+    "LandingURL" : "/dashboard/default"
+})
+
+db.getSiblingDB(acldatabase).applications.save({
+    "_id" : "web-ss#5c880a141fa32be5015ac121",
+    "Name" : "Operation",
+    "LandingURL" : "/dashboard/default"
+})
+
+db.getSiblingDB(acldatabase).applications.save({
+    "_id" : "web-ss#5c880a141fa32be5015ac122",
+    "Name" : "GIA",
+    "LandingURL" : "/dashboard/default"
+})
+
+db.getSiblingDB(acldatabase).applications.save({
+    "_id" : "web-ss#5c880a141fa32be5015ac123",
+    "Name" : "GCFO",
+    "LandingURL" : "/dashboard/default"
+})
+
+db.getSiblingDB(acldatabase).applications.save({
+    "_id" : "web-ss#5c880a141fa32be5015ac124",
+    "Name" : "BE",
+    "LandingURL" : "/dashboard/default"
+})
