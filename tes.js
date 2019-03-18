@@ -1,4 +1,4 @@
-db.getSiblingDB(acldatabase).ss_application.save({
+db.getSiblingDB(database).ss_application.save({
     "_id" : ObjectId("5c880a131fa32be5015ac11f"),
     "name" : "Risk",
     "logo" : "",
@@ -4498,7 +4498,7 @@ db.getSiblingDB(acldatabase).ss_application.save({
     "updated_by" : "ss_private",
     "type" : "internal"
 })
-db.getSiblingDB(acldatabase).ss_application.save({
+db.getSiblingDB(database).ss_application.save({
     "_id" : ObjectId("5c880a141fa32be5015ac120"),
     "name" : "T&I",
     "logo" : "",
@@ -8998,7 +8998,7 @@ db.getSiblingDB(acldatabase).ss_application.save({
     "updated_by" : "ss_private",
     "type" : "internal"
 })
-db.getSiblingDB(acldatabase).ss_application.save({
+db.getSiblingDB(database).ss_application.save({
     "_id" : ObjectId("5c880a141fa32be5015ac121"),
     "name" : "Operation",
     "logo" : "",
@@ -13498,7 +13498,7 @@ db.getSiblingDB(acldatabase).ss_application.save({
     "updated_by" : "ss_private",
     "type" : "internal"
 })
-db.getSiblingDB(acldatabase).ss_application.save({
+db.getSiblingDB(database).ss_application.save({
     "_id" : ObjectId("5c880a141fa32be5015ac122"),
     "name" : "GIA",
     "logo" : "",
@@ -17998,7 +17998,7 @@ db.getSiblingDB(acldatabase).ss_application.save({
     "updated_by" : "ss_private",
     "type" : "internal"
 })
-db.getSiblingDB(acldatabase).ss_application.save({
+db.getSiblingDB(database).ss_application.save({
     "_id" : ObjectId("5c880a141fa32be5015ac123"),
     "name" : "GCFO",
     "logo" : "",
@@ -22498,7 +22498,7 @@ db.getSiblingDB(acldatabase).ss_application.save({
     "updated_by" : "ss_private",
     "type" : "internal"
 })
-db.getSiblingDB(acldatabase).ss_application.save({
+db.getSiblingDB(database).ss_application.save({
     "_id" : ObjectId("5c880a141fa32be5015ac124"),
     "name" : "BE",
     "logo" : "",
