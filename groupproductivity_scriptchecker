@@ -1,0 +1,18 @@
+var acldatabase = "scbbef-sit";
+var database = "scbsssit";
+var arr = ["Risk","T&I","Operation","GIA","GCFO","BE"]
+db.getSiblingDB(database).ss_application.find({"name":{$in:arr}}).forEach(function(x){
+    var is_exist = db.getSiblingDB(acldatabase).applications.find({_id:"web-ss#"+x._id.str}).toArray().length > 0 ? true:false;
+    var group = db.getSiblingDB(acldatabase).acl_groups.find({_id:"SS_APP_"+x._id.str+"_ADMIN"}).toArray();
+    var is_group_exist = group.length > 0 ? true : false;
+    var menu_count = db.getSiblingDB(acldatabase).acl_access.find({application:"web-ss#"+x._id.str}).toArray().length;
+    var is_user_exist = false;
+    var is_acl_access_exist = false;
+    if(is_group_exist){
+        print(group[0]._id)
+        is_user_exist =  db.getSiblingDB(acldatabase).acl_users.find({groups:group[0]._id}).toArray().length > 0 ? true : false;
+        is_acl_access_exist = db.getSiblingDB(acldatabase).acl_accessibility.find({roleid:group[0]._id}).toArray().length > 0 ? true : false;
+    }
+    
+    print([x._id.str,x.name,is_exist,is_group_exist,is_user_exist,menu_count,is_acl_access_exist].join("|"))
+})
