@@ -1,3 +1,7 @@
+var acldatabase = "scbbef-sit";
+var database = "scbsssit";
+var userlist = ["1584546"] // userlist that available in both apps
+var group_productivity_url = "url"
 
 db.getSiblingDB(acldatabase).applications.save({
     "_id" : "web-ss#5c880a131fa32be5015ac11f",
