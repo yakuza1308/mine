@@ -28885,7 +28885,32 @@ db.getSiblingDB(database).ss_application.find({"name":{$in:arr}}).forEach(functi
             {
                 "accessid" : "SS_APP_"+app_id+"_GPSHAPEOFCHANGE",
                 "accessvalue" : 15
+            },
+            {
+                "accessid" : "SS_APP_"+app_id+"_CONFIGURATION",
+                "accessvalue" : 15
+            },
+            {
+                "accessid" : "SS_APP_"+app_id+"_APPLICATIONAUDITTRAIL",
+                "accessvalue" : 15
+            },
+            {
+                "accessid" : "SS_APP_"+app_id+"_ROLEMANAGEMENT",
+                "accessvalue" : 15
+            },
+            {
+                "accessid" : "SS_APP_"+app_id+"_USERAUDITTRAIL",
+                "accessvalue" : 15
+            },
+            {
+                "accessid" : "SS_APP_"+app_id+"_APPLICATIONUSAGEDETAIL",
+                "accessvalue" : 15
+            },
+            {
+                "accessid" : "SS_APP_"+app_id+"_USERMANAGEMENT",
+                "accessvalue" : 15
             }
+
         ],
         "owner" : "",
         "grouptype" : 0,
