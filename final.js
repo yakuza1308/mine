@@ -1,6 +1,17 @@
 var acldatabase = "scbbef-sit";
 var database = "scbsssit";
-var userlist = ["1584546"] // userlist that available in both apps
+var userlist = [
+    {firstname:"Ambreen",lastname:"Hamza",loginid:"1394022"}, 
+    {firstname:"Luca",lastname:"Borroni",loginid:"1521647"}, 
+    {firstname:"Kalaivani",lastname:"Thiruppathi",loginid:"1548237"}, 
+    {firstname:"Storm",lastname:"Dalati",loginid:"1502498"}, 
+    {firstname:"Kathiravan",lastname:"Nagalingam",loginid:"1584547"}, 
+    {firstname:"Punarvi",lastname:"Karanam",loginid:"1584546"}, 
+    {firstname:"Oliver",lastname:"Cheung",loginid:"1426484"}, 
+    {firstname:"Mike",lastname:"Humphrey",loginid:"1228317"}, 
+    {firstname:"Ryan",lastname:"Angga",loginid:"15722991"}, 
+] 
+// userlist that available in both apps
 
 
 // Set Applications Data
@@ -8,10 +19,10 @@ for(var i in userlist){
 	db.getSiblingDB(acldatabase).acl_users.save({
 	    "_id" : "testuser-gp"+i,
 	    "id" : "testuser-gp"+i,
-	    "loginid" : userlist[i],
-	    "fullname" : "Test User "+userlist[i],
-	    "firstname" : "Test",
-	    "lastname" : "User "+userlist[i],
+	    "loginid" : userlist[i].loginid,
+	    "fullname" : [userlist[i].firstname,userlist[i].lastname].join(" "),
+	    "firstname" : userlist[i].firstname,
+	    "lastname" : userlist[i].lastname,
 	    "email" : "",
 	    "password" : "",
 	    "enable" : true,
@@ -1035,6 +1046,762 @@ var aclaccess = [
         "parentid" : "",
         "url" : "/modules/default?key=84ccc02c5e00bf4d1a372b151e3d95cfc07e6f2db62e694d1f1916a1645891a31391ee24edfda2ab603e7aeb01fc98fd759ed44ed78a7338e44a76beebd7ddc46efe30ff831e998147",
         "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac124"
+        ]
+    },
+        {
+        "_id" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "id" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "title" : "Configuration",
+        "category" : 2,
+        "icon" : "",
+        "parentid" : "",
+        "url" : "/modules/default?key=284e4ec849c51e91b5e8444f7808e92864336e1df2021d320ae85224085edde43d2d00fd256930b294120d803d7d22a6b6527e31f20bd85f8702f53e8139f73abc83",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a131fa32be5015ac11f"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a131fa32be5015ac11f_APPLICATIONAUDITTRAIL",
+        "id" : "SS_APP_5c880a131fa32be5015ac11f_APPLICATIONAUDITTRAIL",
+        "title" : "Application Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "url" : "#",
+        "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a131fa32be5015ac11f"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a131fa32be5015ac11f_ROLEMANAGEMENT",
+        "id" : "SS_APP_5c880a131fa32be5015ac11f_ROLEMANAGEMENT",
+        "title" : "Role Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "url" : "#",
+        "index" : 1,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a131fa32be5015ac11f"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a131fa32be5015ac11f_USERAUDITTRAIL",
+        "id" : "SS_APP_5c880a131fa32be5015ac11f_USERAUDITTRAIL",
+        "title" : "User Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "url" : "#",
+        "index" : 2,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a131fa32be5015ac11f"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a131fa32be5015ac11f_APPLICATIONUSAGEDETAIL",
+        "id" : "SS_APP_5c880a131fa32be5015ac11f_APPLICATIONUSAGEDETAIL",
+        "title" : "Application Usage Detail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "url" : "#",
+        "index" : 3,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a131fa32be5015ac11f"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a131fa32be5015ac11f_USERMANAGEMENT",
+        "id" : "SS_APP_5c880a131fa32be5015ac11f_USERMANAGEMENT",
+        "title" : "User Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a131fa32be5015ac11f_CONFIGURATION",
+        "url" : "#",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a131fa32be5015ac11f"
+        ]
+    },
+        {
+        "_id" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "id" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "title" : "Configuration",
+        "category" : 2,
+        "icon" : "",
+        "parentid" : "",
+        "url" : "/modules/default?key=3b63b440afc1b2a1fd7fe6d13a91a64a5fac1fbc990be48f4b1cbf5c352039df9aecdf105cb12fc8ba0d9bb2fa205ddcd08466aa64e03009ebfd5d69841621e57fa8",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac120"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac120_APPLICATIONAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac120_APPLICATIONAUDITTRAIL",
+        "title" : "Application Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "url" : "#",
+        "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac120"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac120_ROLEMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac120_ROLEMANAGEMENT",
+        "title" : "Role Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "url" : "#",
+        "index" : 1,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac120"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac120_USERAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac120_USERAUDITTRAIL",
+        "title" : "User Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "url" : "#",
+        "index" : 2,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac120"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac120_APPLICATIONUSAGEDETAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac120_APPLICATIONUSAGEDETAIL",
+        "title" : "Application Usage Detail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "url" : "#",
+        "index" : 3,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac120"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac120_USERMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac120_USERMANAGEMENT",
+        "title" : "User Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac120_CONFIGURATION",
+        "url" : "#",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac120"
+        ]
+    },
+        {
+        "_id" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "id" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "title" : "Configuration",
+        "category" : 2,
+        "icon" : "",
+        "parentid" : "",
+        "url" : "/modules/default?key=c7c8d38be80530738ad84f41f2dc8d51513fa7fd2d2faa569a80310f1deb9460b8de6d29133d889f66a0742e5df51f3e0c245e8fe33f6ae3e71e6e157342d6c3016d",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac121"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac121_APPLICATIONAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac121_APPLICATIONAUDITTRAIL",
+        "title" : "Application Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "url" : "#",
+        "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac121"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac121_ROLEMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac121_ROLEMANAGEMENT",
+        "title" : "Role Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "url" : "#",
+        "index" : 1,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac121"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac121_USERAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac121_USERAUDITTRAIL",
+        "title" : "User Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "url" : "#",
+        "index" : 2,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac121"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac121_APPLICATIONUSAGEDETAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac121_APPLICATIONUSAGEDETAIL",
+        "title" : "Application Usage Detail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "url" : "#",
+        "index" : 3,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac121"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac121_USERMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac121_USERMANAGEMENT",
+        "title" : "User Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac121_CONFIGURATION",
+        "url" : "#",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac121"
+        ]
+    },
+        {
+        "_id" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "id" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "title" : "Configuration",
+        "category" : 2,
+        "icon" : "",
+        "parentid" : "",
+        "url" : "/modules/default?key=bed7e0262d7f60ba783a48530973f420e1b9ddc8e2f6389b9dc898c9f824c7dfa4fb531f0a5bf24eaf95116bb0fa9c3513863ec2b5a37477bea58ad3ce24484bfecd",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac122"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac122_APPLICATIONAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac122_APPLICATIONAUDITTRAIL",
+        "title" : "Application Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "url" : "#",
+        "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac122"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac122_ROLEMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac122_ROLEMANAGEMENT",
+        "title" : "Role Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "url" : "#",
+        "index" : 1,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac122"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac122_USERAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac122_USERAUDITTRAIL",
+        "title" : "User Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "url" : "#",
+        "index" : 2,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac122"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac122_APPLICATIONUSAGEDETAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac122_APPLICATIONUSAGEDETAIL",
+        "title" : "Application Usage Detail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "url" : "#",
+        "index" : 3,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac122"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac122_USERMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac122_USERMANAGEMENT",
+        "title" : "User Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac122_CONFIGURATION",
+        "url" : "#",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac122"
+        ]
+    },
+        {
+        "_id" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "id" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "title" : "Configuration",
+        "category" : 2,
+        "icon" : "",
+        "parentid" : "",
+        "url" : "/modules/default?key=acbe8cb01c5551cb1e3ee4812d06c00383f591233ecf6fd25ccf7015861642dd7f66c9c7c2b92cb035a662721857ac9ca1ad52934c25a6fadcb368754e43a193701c",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac123"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac123_APPLICATIONAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac123_APPLICATIONAUDITTRAIL",
+        "title" : "Application Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "url" : "#",
+        "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac123"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac123_ROLEMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac123_ROLEMANAGEMENT",
+        "title" : "Role Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "url" : "#",
+        "index" : 1,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac123"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac123_USERAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac123_USERAUDITTRAIL",
+        "title" : "User Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "url" : "#",
+        "index" : 2,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac123"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac123_APPLICATIONUSAGEDETAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac123_APPLICATIONUSAGEDETAIL",
+        "title" : "Application Usage Detail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "url" : "#",
+        "index" : 3,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac123"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac123_USERMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac123_USERMANAGEMENT",
+        "title" : "User Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac123_CONFIGURATION",
+        "url" : "#",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac123"
+        ]
+    },
+        {
+        "_id" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "id" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "title" : "Configuration",
+        "category" : 2,
+        "icon" : "",
+        "parentid" : "",
+        "url" : "/modules/default?key=50597c42d49ce48b73348cdf20b2b4ba6f9a2d121cf95643cc2a6cfc0e8b375062462b2592af3d0c450cb6fb95ffd74a10f1aade1d90ccc72229b66d49462a02dc2f",
+        "index" : 4,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac124"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac124_APPLICATIONAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac124_APPLICATIONAUDITTRAIL",
+        "title" : "Application Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "url" : "#",
+        "index" : 0,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac124"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac124_ROLEMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac124_ROLEMANAGEMENT",
+        "title" : "Role Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "url" : "#",
+        "index" : 1,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac124"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac124_USERAUDITTRAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac124_USERAUDITTRAIL",
+        "title" : "User Audit Trail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "url" : "#",
+        "index" : 2,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac124"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac124_APPLICATIONUSAGEDETAIL",
+        "id" : "SS_APP_5c880a141fa32be5015ac124_APPLICATIONUSAGEDETAIL",
+        "title" : "Application Usage Detail",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "url" : "#",
+        "index" : 3,
+        "group1" : "",
+        "group2" : "",
+        "group3" : "",
+        "enable" : true,
+        "specialaccess1" : "",
+        "specialaccess2" : "",
+        "specialaccess3" : "",
+        "specialaccess4" : "",
+        "application" : [ 
+            "web-ss#5c880a141fa32be5015ac124"
+        ]
+    },
+    {
+        "_id" : "SS_APP_5c880a141fa32be5015ac124_USERMANAGEMENT",
+        "id" : "SS_APP_5c880a141fa32be5015ac124_USERMANAGEMENT",
+        "title" : "User Management",
+        "category" : 5,
+        "icon" : "",
+        "parentid" : "SS_APP_5c880a141fa32be5015ac124_CONFIGURATION",
+        "url" : "#",
+        "index" : 4,
         "group1" : "",
         "group2" : "",
         "group3" : "",
@@ -28144,10 +28911,10 @@ db.getSiblingDB(database).ss_application.find({"name":{$in:arr}}).forEach(functi
             "allowstatus" : true,
             "islandingpage" : false,
             "global" : {
-                "create" : false,
+                "create" : true,
                 "read" : true,
-                "update" : false,
-                "delete" : false,
+                "update" : true,
+                "delete" : true,
                 "owned" : false,
                 "curtain" : false,
                 "upload" : false
@@ -28192,16 +28959,16 @@ db.getSiblingDB(database).ss_application.find({"name":{$in:arr}}).forEach(functi
         db.getSiblingDB(acldatabase).acl_accessibility.save(accs)
     })
     userlist.forEach(function(x){
-      var existing = db.getSiblingDB(acldatabase).acl_users.find({loginid:x,groups:group._id}).toArray()
+      var existing = db.getSiblingDB(acldatabase).acl_users.find({loginid:x.loginid,groups:group._id}).toArray()
       if(existing.length==0){
       	var userid = ObjectId().str;
       	var userdata = {
 		    "_id" : userid,
 		    "id" : userid,
-		    "loginid" : x,
-		    "fullname" : "Test User "+x,
-		    "firstname" : "Test",
-		    "lastname" : "User "+x,
+		    "loginid" : x.loginid,
+		    "fullname" : [x.firstname,x.lastname].join(" "),
+		    "firstname" : x.firstname,
+		    "lastname" : x.lastname,
 		    "email" : "",
 		    "password" : "",
 		    "enable" : true,
